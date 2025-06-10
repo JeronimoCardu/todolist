@@ -24,7 +24,9 @@ export default function Task({ task, tasks, setTasks }: Props) {
     )
   }
   return (
-    <div className='flex dark:bg-[#25273D] text-[#494C6B] items-center p-4 border-b-1 dark:text-[#C8CBE7] dark:border-[#393A4B] border-gray-100 justify-between'>
+    <div
+      draggable
+      className='flex dark:bg-[#25273D] text-[#494C6B] items-center p-4 border-b-1 dark:text-[#C8CBE7] dark:border-[#393A4B] border-gray-100 justify-between'>
       <div className='flex items-center gap-4'>
         <button
           onClick={() => markCompleted(task.id)}

@@ -1,5 +1,6 @@
 import { TaskProps, TodoProps } from '@/types/types'
 import Filter from './Filter'
+import clearCompleteTasks from '@/utils/clearCompleteTasks'
 
 export default function Options({
   tasks,
@@ -10,7 +11,7 @@ export default function Options({
   const tasksIncomplete = tasks.filter((task: TaskProps) => !task.completed)
   return (
     <>
-      <div className='dark:bg-[#25273D] dark:text-[#5B5E7E] text-[#9495A5]  grid grid-cols-3 items-center  p-4'>
+      <div className='dark:bg-[#25273D] dark:text-[#5B5E7E] text-[#9495A5]  grid grid-cols-2 desktop:grid-cols-3 items-center  p-4'>
         <p className='text-[0.75rem]  desktop:text-[0.875rem] '>
           {tasksIncomplete.length} items left
         </p>
@@ -24,15 +25,7 @@ export default function Options({
         </div>
         <button
           onClick={() => {
-            setTasks(
-              tasks.map((task) => {
-                return {
-                  title: task.title,
-                  completed: false,
-                  id: task.id,
-                }
-              })
-            )
+            setTasks(clearCompleteTasks(tasks))
           }}
           className='text-right text-[0.75rem] desktop:text-[0.875rem] cursor-pointer'>
           Clear Completed

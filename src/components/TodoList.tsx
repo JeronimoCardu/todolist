@@ -12,7 +12,9 @@ export default function TodoList({
 }: TodoProps) {
   return (
     <div className='space-y-4'>
-      <section className='desktop:mx-auto overflow-hidden desktop:max-w-4/10 bg-transparent shadow-[0px_35px_50px_rgba(194,195,214,.5)] dark:shadow-[0px_35px_50px_rgba(0,0,0,.5)] rounded-[5px] '>
+      <section
+        onDragOver={(e) => e.preventDefault()}
+        className='desktop:mx-auto overflow-hidden desktop:max-w-4/10 bg-transparent shadow-[0px_35px_50px_rgba(194,195,214,.5)] dark:shadow-[0px_35px_50px_rgba(0,0,0,.5)] rounded-[5px] '>
         {filterList(tasks, filterSelected.toLowerCase()).map((task, idx) => (
           <Task key={idx} task={task} tasks={tasks} setTasks={setTasks} />
         ))}
