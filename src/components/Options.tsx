@@ -11,7 +11,7 @@ export default function Options({
   const tasksIncomplete = tasks.filter((task: TaskProps) => !task.completed)
   return (
     <>
-      <div className='dark:bg-[#25273D] dark:text-[#5B5E7E] text-[#9495A5]  grid grid-cols-2 desktop:grid-cols-3 items-center  p-4'>
+      <div className='dark:bg-[#25273D] bg-white dark:text-[#5B5E7E] text-[#9495A5]  grid grid-cols-2 desktop:grid-cols-3 items-center  p-4'>
         <p className='text-[0.75rem]  desktop:text-[0.875rem] '>
           {tasksIncomplete.length} items left
         </p>

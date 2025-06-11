@@ -8,7 +8,7 @@ export default function Filter({
 }: TodoProps) {
   const filters = ['All', 'Active', 'Completed']
   return (
-    <div className='dark:bg-[#25273D] text-[0.875rem] bg-white rounded-[5px] desktop:m-0 mb-4 gap-4 font-bold p-[.5rem_1rem]  flex items-center justify-center'>
+    <div className='dark:bg-[#25273D] text-[0.875rem] bg-white rounded-[5px] desktop:m-0 mb-4 gap-4 font-bold p-[.75rem_1rem]  flex items-center justify-center'>
       {filters.map((btn, idx) => (
         <button
           onClick={() => {

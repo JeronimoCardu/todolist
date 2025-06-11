@@ -21,7 +21,7 @@ export default function CreateTodo({ tasks, setTasks }: TodoProps) {
         )
       }}
       className='my-4 dark:bg-[#25273D] desktop:mx-auto desktop:max-w-4/10 bg-white rounded-[5px] items-center p-3 flex gap-4'>
-      <div className='border-1 dark:border-[#393A4B] w-[1.25rem] h-[1.25rem] border-[#e3e4f1] cursor-pointer rounded-full'></div>
+      <div className='border-1 dark:border-[#393A4B] w-[1.25rem] h-[1.25rem] border-[#e3e4f1] rounded-full'></div>
       <input
         value={value}
         onChange={(e) => setValue(e.target.value)}

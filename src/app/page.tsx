@@ -30,9 +30,11 @@ export default function Home() {
           </button>
         </header>
         <Todo />
-        <p className='text-[.875rem] text-[#9495a5] text-center'>
-          Drag and drop to reorder list
-        </p>
+        <div className='desktop:mx-auto desktop:max-w-4/10 p-4 group '>
+          <p className='group-hover:translate-y-6 transition-transform linear duration-200 cursor-default text-[.875rem] text-[#9495a5] text-center'>
+            Drag and drop to reorder list
+          </p>
+        </div>
       </>
     )
 }
