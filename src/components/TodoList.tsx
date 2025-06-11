@@ -52,7 +52,7 @@ export default function TodoList({
 
   return (
     <div>
-      <section className='desktop:mx-auto overflow-hidden desktop:max-w-4/10 bg-transparent shadow-[0px_35px_50px_rgba(194,195,214,.5)] dark:shadow-[0px_35px_50px_rgba(0,0,0,.5)] rounded-[5px] '>
+      <section className='mb-3 desktop:m-0 desktop:mx-auto overflow-hidden desktop:max-w-4/10 bg-transparent shadow-[0px_35px_50px_rgba(194,195,214,.5)] dark:shadow-[0px_35px_50px_rgba(0,0,0,.5)] rounded-[5px] '>
         <DndContext
           sensors={sensors}
           collisionDetection={closestCenter}
